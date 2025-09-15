@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Transactions</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">FintechDemo</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="registration.html">Register</a></li>
+        <li class="nav-item"><a class="nav-link active" href="transactions.html">Transactions</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container mt-5">
+  <h2 class="mb-4">Your Transactions</h2>
+
+  <!-- Transactions Table -->
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Amount</th>
+        <th>Type</th>
+        <th>Sender ID</th>
+        <th>Recipient ID</th>
+      </tr>
+    </thead>
+    <tbody id="transactionList">
+      <!-- Transactions will be injected here via JS -->
+    </tbody>
+  </table>
+
+  <!-- Link to new transfer -->
+  <a href="transfer.html" class="btn btn-primary mt-3" id="newTransferBtn">Make a New Transfer</a>
+</div>
+
+<script>
+  // Example transactions for the current user
+  const transactions = [
+    { amount: 100, type: "Transfer", senderId: "user123", recipientId: "user456" },
+    { amount: 250, type: "Receive", senderId: "user123", recipientId: "user789" },
+    { amount: 500, type: "Transfer", senderId: "user999", recipientId: "user123" }
+  ];
+
+  const transactionList = document.getElementById("transactionList");
+  transactions.forEach(tx => {
+    const row = document.createElement("tr");
+    row.innerHTML = `
+      <td>${tx.amount}</td>
+      <td>${tx.type}</td>
+      <td>${tx.senderId}</td>
+      <td>${tx.recipientId}</td>
+    `;
+    transactionList.appendChild(row);
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "test-framework-demo",
+  "version": "1.0.0",
+  "description": "desc",
+  "main": "index.js",
+  "scripts": {
+    "local-api-test": "npx cypress run --spec cypress/e2e/api/*.cy.js --config-file local.config.js",
+    "local-ui-test": "npx cypress run --spec cypress/e2e/ui/*.cy.js --config-file local.config.js",
+    "local-test": "npx cypress run --config-file local.config.js",
+    "qa-api-test": "npx cypress run --spec cypress/e2e/api/*.cy.js --config-file qa.config.js",
+    "qa-ui-test": "npx cypress run --spec cypress/e2e/ui/*.cy.js --config-file qa.config.js",
+    "qa-test": "npx cypress run --config-file local.config.js",
+    "uat-api-test": "npx cypress run --spec cypress/e2e/api/*.cy.js --config-file uat.config.js",
+    "uat-ui-test": "npx cypress run --spec cypress/e2e/ui/*.cy.js --config-file uat.config.js",
+    "uat-test": "npx cypress run --config-file uat.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@work:gordonpm/test-framework-demo.git"
+  },
+  "author": "gordonpm",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress-mochawesome-reporter": "^4.0.2"
+  }
+}

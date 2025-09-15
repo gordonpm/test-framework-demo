@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="">FintechDemo</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="login.html">Login</a></li>
+        <li class="nav-item"><a class="nav-link" href="registration.html">Register</a></li>
+      </ul>
+    </div> 
+  </div>
+</nav>
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <div class="card shadow">
+        <div class="card-body">
+          <h3 class="text-center mb-4">Login</h3>
+          <div id="loginError" class="alert alert-danger d-none" role="alert"></div>
+          <form id="loginForm" action="home.html" method="get">
+            <div class="mb-3">
+              <label for="loginEmail">Email</label>
+              <input type="email" id="loginEmail" class="form-control" placeholder="Enter email">
+            </div>
+            <div class="mb-3">
+              <label for="loginPassword">Password</label>
+              <input type="password" id="loginPassword" class="form-control" placeholder="Enter password">
+            </div>
+            <button type="submit" id="loginBtn" class="btn btn-primary w-100">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <script>
+  document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // prevent form submit
+    const email = document.getElementById("loginEmail").value.trim();
+    const password = document.getElementById("loginPassword").value.trim();
+    const errorDiv = document.getElementById("loginError");
+
+    if (!email && !password) {
+      errorDiv.textContent = "Email and Password cannot be empty.";
+      errorDiv.classList.remove("d-none");
+    } else if (!email) {
+      errorDiv.textContent = "Email cannot be empty.";
+      errorDiv.classList.remove("d-none");
+    } else if (!password) {
+      errorDiv.textContent = "Password cannot be empty.";
+      errorDiv.classList.remove("d-none");
+    } else {
+      errorDiv.classList.add("d-none");
+      // Redirect to homepage (simulating login success)
+      window.location.href = "home.html";  
+    }
+    });
+</script> -->
+</body>
+</html>

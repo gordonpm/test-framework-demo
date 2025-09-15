@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Tom Hardy",
+        "email": "tom@example.com",
+        "accountType": "trial",
+        "isValid": true
+    },
+    {
+        "name": "Existing User",
+        "email": "existing-email@example.com",
+        "accountType": "free",
+        "isValid": false
+    }
+]

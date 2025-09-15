@@ -1,0 +1,16 @@
+[
+    {
+        "userId": "100",
+        "amount": 100.50,
+        "type": "transfer",
+        "recipientId": "456",
+        "isValid": true
+    }, 
+    {
+        "userId": "abc",
+        "amount": 100.50,
+        "type": "transfer",
+        "recipientId": "456",
+        "isValid": false
+    }
+]
